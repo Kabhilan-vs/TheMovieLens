@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="icon" href="logo.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+        <title>
+            Join us
+        </title>
+        <script>
+            let dom_count=0;
+            function nam(){
+                dom_count=0;
+                var doc = document;
+                var n = doc.getElementById("name").value;
+                var a = doc.getElementById("age").value;
+                var sent, i;
+                
+                var r1 = doc.getElementById("r1");
+                var r2 = doc.getElementById("r2");
+                var r3 = doc.getElementById("r3");
+                var r4 = doc.getElementById("r4");
+                var r5 = doc.getElementById("r5");
+                var r6 = doc.getElementById("r6");
+                var r7 = doc.getElementById("r7");
+                var r8 = doc.getElementById("r8");
+                var r9 = doc.getElementById("r9");
+                var error_message = doc.getElementById("error-message");
+        
+                var textNode = doc.createTextNode("");
+                var childNodes = doc.body.childNodes;
+        
+                var newElement = doc.createElement("p");
+                newElement.setAttribute("id", "newElement");
+                doc.body.insertBefore(newElement, childNodes[0]);
+        
+                if(n=="")
+                {
+                    sent = "[ Nothing in the box ]";
+                }
+                else if(!isNaN(n))
+                {
+                    sent = "[ Use Only alphabet,Don't use numerical ]";
+                }
+                else
+                {
+                    sent = "";
+                    dom_count++;
+                }
+                r1.innerHTML = sent;
+        
+                if(a==0)
+                {
+                    i = "[ Nothing in the box ]";
+                }
+                else if(a>18 && a<=130)
+                {
+                    i = "";
+                    dom_count++;
+                }
+                else if(a>130)
+                {
+                    i = "[ Age is should under 130 ]";
+                }
+                else if(isNaN(a))
+                {
+                    i = "[ Only numbers to use ]";
+                }
+                else
+                {
+                    i = "[ Not eligible ]";
+                }
+                r2.innerHTML = i;
+        
+                var k;
+                var str = doc.getElementById("roll").value;
+                if(str==0)
+                {
+                    k = "[ Nothing in the box ]";
+                }
+                else{
+                    k="";
+                    dom_count++;
+                }
+                r3.innerHTML = k;
+        
+                var tmail = doc.getElementById("mail").value;
+                var j;
+                var at = /@/;
+                var dot = /\.(com|edu)$/;
+                if (tmail.length === 0) 
+                {
+                    j = "[ Nothing in the box ]";
+                } 
+                else if (!at.test(tmail)) 
+                {
+                    j = "[ There is a missing '@' ]";
+                } 
+                else if (!dot.test(tmail)) 
+                {
+                    j = "[ Missing '.com' or '.edu' ]";
+                }
+                else{
+                    j="";
+                    dom_count++;
+                }
+                r4.innerHTML = j;
+        
+            
+        
+                var phone = doc.getElementById("pho").value;
+                var r = phone.length;
+                var p = "";
+                if(phone==0)
+                {
+                    p = "[ Nothing in the box ]";
+                }
+                else if(isNaN(phone))
+                {
+                    p = "[ Use only numbers ]";
+                }
+                else if(r<10)
+                {
+                    p = "[ The number is less than 10 ]";
+                }
+                else if(r>10)
+                {
+                    p = "[ The number is greater than 10 ]";
+                }
+                else if(r==10)
+                {
+                    dom_count++;
+                    p = "";
+                    
+                }
+                r8.innerHTML = p;
+        
+                
+        
+                var radios = doc.getElementsByTagName("input");
+                var isChecked = false;
+                for (var i = 0; i < radios.length; i++) 
+                {
+                    if (radios[i].getAttribute("type") == "radio" && radios[i].checked) 
+                    {
+                        isChecked = true;
+                        break;
+                    }
+                }
+                if (!isChecked) 
+                {
+                    error_message.appendChild(textNode);
+                    textNode.nodeValue = "[ Please your a gender. ]";
+                    return false;
+                } 
+                else 
+                {
+                    if(error_message.hasChildNodes())
+                    {
+                        error_message.removeChild(error_message.firstChild);
+                    }
+                    dom_count++;
+                    return true;
+                    
+                }
+                
+            }
+            function pri(){
+                if(dom_count==6){
+                    var name = document.getElementById("name").value;
+                var age = document.getElementById("age").value;
+                var roll = document.getElementById("roll").value;
+                var email = document.getElementById("mail").value;
+                var phone = document.getElementById("pho").value;
+                var skill = document.getElementById("skill").value;
+                
+                var gender = document.querySelector('input[name="gender"]:checked').value;
+
+                    var details = "<h2 class='jk'>Validated Details</h2>" +
+                    "<p>Name: " + name + "</p>" +
+                    "<p>Age: " + age + "</p>" +
+                    "<p>Skill: " + roll + "</p>" +
+                    "<p>Email: " + email + "</p>" +
+                    "<p>Phone Number: " + phone + "</p>" +
+                    "<p>Gender: " + gender + "</p>" +
+                    "<p>Selected Interset: " + skill + "</p>" ;
+
+
+                    document.getElementById("printf").innerHTML = details;
+
+                   
+           
+
+                }
+                else{
+                    var kp=6-dom_count;
+                    alert("There is "+kp+" error, So It Doesn't display the details");
+                    dom_count=0;
+     
+                }
+            }
+        </script>
+        
+        
+       <style>
+           .error{
+                font-size:30px;
+                color: rgb(255, 85, 0);
+                margin-right: 20px;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                transition: 2s;
+                text-shadow: 2px 2px 2px rgb(0, 0, 0);
+            }
+            body{
+                background-image: linear-gradient(to right, rgb(30, 32, 78),rgb(52, 24, 108));
+            }
+            .block{
+               
+                background-image: linear-gradient(to right, rgb(6, 14, 91),rgb(24, 21, 26));
+                display: inline-block;
+                text-align: left;
+                padding: 100px;
+              
+                padding-right: 100px;
+                border-radius: 20px;
+                box-shadow: 10px 10px 10px black;
+              
+                transition: transform 0.8s ease;
+            }
+            .block:hover{
+                
+                box-shadow: 15px 15px 15px rgb(14, 128, 227);
+
+            }
+            p{
+                color:greenyellow;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 20px;
+
+            }
+            
+            input{
+                padding:20px;
+                border-radius: 30px;
+                width: 350px;
+                font-size: 20px;
+                transition: 0.8s;
+            }
+            input::placeholder{
+                font-size: 20px;
+            }
+            input[type=radio] {
+                    border: 0px;
+                    width: 60%;
+                    height: 1em;
+        }
+
+            select{
+                padding:15px;
+                border-radius: 30px;
+                
+                transition: 0.8s;
+            }
+            
+            .zoom{
+                transform: scale(1);
+                transition: 0.8s;
+                padding: 20px;
+                border-radius: 50px;
+                margin-bottom: 20px;
+            }
+            .zoom:hover{
+                
+                box-shadow: 10px 10px 10px rgb(49, 249, 236);
+            }
+            button{
+                padding: 10px;
+                transition: 0.4s;
+                border-radius: 20px;
+                font-size: 30px;
+                
+            }
+
+            button:hover{
+                box-shadow: 10px 10px 10px rgb(123, 212, 218);
+            }
+            #printf{
+                margin-top: 30px;
+                background-image: linear-gradient(to right, rgba(5, 31, 19, 0.835),rgb(27, 36, 162));
+                padding: 40px;
+                border-radius: 30px;
+                border-color: brown;
+                max-width:max-content;
+                
+            }
+            #printf p{
+                size: 45px;
+                color: rgb(164, 236, 234);
+                padding: 20px;
+                text-align: left;
+              
+            }
+            .jk{
+                font-size: 35px;
+                padding: 30px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color: rgb(12, 255, 12);
+                transition: 0.5s;
+                filter: brightness(80%);
+                scale: 1;
+            }
+            .jk{
+                box-shadow: 5px 5px 10px black;
+                scale: 1.1;
+                filter: brightness(110%);
+            }
+            select{
+                padding:20px;
+                
+                border-radius: 30px;
+                width: 350px;
+                font-size: 20px;
+                transition: 0.8s;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="navbar-container">
+                <div class="logo-container">
+                    <h1 class="logo">TheMovieLens</h1>
+                </div>
+                <div class="menu-container">
+                    <ul class="menu-list">
+                        <a href="index.html" class="links"><li class="menu-list-item " >Home</li></a>
+                        <a href="collection.html" class="links"><li class="menu-list-item">Collections</li></a>
+                        <a href="elite.html" class="links"> <li class="menu-list-item">Elite 5</li></a>
+                        <a href="about.html" class="links"> <li class="menu-list-item">About us</li></a>
+                        <a href="contact.html" class="links"> <li class="menu-list-item" style="text-shadow: 2px 2px 2px rgb(50, 218, 17);">Contact</li></a>
+    
+                    </ul>
+                </div>
+                <div class="profile-container">
+                    <img class="profile-picture" src="img/profile.webp" alt="">
+                    <div class="profile-text-container">
+                        <span class="profile-text">Profile</span>
+                    
+                    </div>
+                    <a href="signin.php"><button id="logout">Logout</button></a>
+                    <!--
+                    <div class="toggle">
+                        <i class="fas fa-moon toggle-icon"></i>
+                        <i class="fas fa-sun toggle-icon"></i>
+                        <div class="toggle-ball"></div>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <a href="index.html" class="links tooltip"><span class="tooltiptext">Home</span> <i class="left-menu-icon fas fa-home" ></i></a>
+                <a href="collection.html" class="links tooltip"> <span class="tooltiptext">Collection</span> <i class="left-menu-icon fas fa-tv"></i></a>
+                    <a href="elite.html" class="links tooltip"> <span class="tooltiptext">Elite 5</span>  <i class="left-menu-icon fas fa-bookmark"></i></a>
+           
+                        <a href="about.html" class="links tooltip"> <span class="tooltiptext">About</span> <i class="left-menu-icon fas fa-users"></i></a>
+                        <a href="contact.html"  class="links tooltip"><span class="tooltiptext">Contact</span><i class="left-menu-icon fas fa-regular fa-address-book" style="text-shadow: 2px 2px 2px rgb(50, 218, 17);font-weight: bold;"></i></a>
+    
+    
+        </div>
+        
+        <center>
+            <div>
+                        <p style="color:rgb(0, 164, 209); font-size:5vw;">Join with us</p>
+                        <hr>
+                        <br>
+            </div>
+                    <div class="block">
+                        <form>
+                    <div class="zoom">
+                    <label for="name"><p>Name</p><p id="r1" class="error"></p></label>
+                    <input id="name" placeholder="Enter your Full Name">
+                    <br><br>
+                    </div>
+                    
+                    <div class="zoom">
+                    <label for="age"><p>Age</p> <p id="r2" class="error"></p></label>
+                    <input id="age" placeholder="Enter your Age ">
+                    <br><br>
+                    </div>
+            
+                    <div class="zoom">
+                    <label for="roll"><p>Your Movie review skill</p> <p id="r3" class="error"></p></label>
+                    <input id="roll" placeholder="Enter the roll number">
+                    <br><br>
+                    </div>
+            
+                    <div class="zoom">
+                    <label for="mail"><p>Email</p> <p id="r4" class="error"></p></label>
+                    <input id="mail" placeholder="Enter the Your Clg mail">
+                    <br><br>
+                    </div>
+                    
+                    <div class="zoom">
+                    <label for="pho"><p>Phone Number</p> <p id="r8" class="error"></p></label>
+                    <input id="pho" placeholder="Enter Phone or moblie no.">
+                    </div>
+                    
+                    <br>
+         <br>
+            
+                    <label for="gender"><p  class="zoom">Select your Gender</p><p id="error-message" class="error"></p></label>
+                    <p class="zoom"><input type="radio" name="gender" value="male" class="rad"> Male<br></p>
+                    <p class="zoom"><input type="radio" name="gender" value="female" class="rad"> Female<br></p>
+                    <p class="zoom"><input type="radio" name="gender" value="other" class="rad"> Other<br></p>
+
+                    <label for="skill"><p  class="zoom">Movie Type you like
+                    <select name="skill" id="skill">
+                        <option value="All type">All Type of Movies</option>
+                        <option value="Action">Action</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Science Fiction">Science Fiction</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Horror">Horror</option>
+
+                    </select>
+                </p></label>
+                    
+                    <br>
+            
+               
+                
+                    
+            
+            <br><br>
+                    <br><br>
+                    <button type="button" onclick="nam()" >Submit</button>
+            
+                    <button type="reset" >Clear</button>
+                    <button type="button" onclick="pri()" >Display</button>
+                    </form>
+
+                    </div>
+                    <div id="printf" >
+                            
+                    </div>
+                    </center>
+
+                </body>
+            </html>

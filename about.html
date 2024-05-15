@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="icon" href="logo.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <title>About Us - Movie Review Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #040745;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            transition: 0.7s;
+            filter: brightness(70%);
+            background-color: #000000b0;
+            color: white;
+            border-radius: 9px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .container:hover{
+            box-shadow: 5px 5px 15px ;
+            border-radius: 39px;
+            filter: brightness(110%);
+        }
+        .hi {
+            padding: 5px;
+            font-weight: bold;
+            color: rgb(50, 194, 18);
+            transition: 0.5s;
+        
+        }
+        .hi:hover{
+            padding-bottom: 20px;
+            text-decoration:wavy;
+        }
+        p {
+            color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo">TheMovieLens</h1>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <a href="index.html" class="links"><li class="menu-list-item " >Home</li></a>
+                    <a href="collection.html" class="links"><li class="menu-list-item">Collections</li></a>
+                    <a href="elite.html" class="links"> <li class="menu-list-item">Elite 5</li></a>
+                    <a href="about.html" class="links"> <li class="menu-list-item" style="text-shadow: 2px 2px 2px rgb(50, 218, 17);">About us</li></a>
+                    <a href="contact.html" class="links"> <li class="menu-list-item">Contact</li></a>
+
+                </ul>
+            </div>
+            <div class="profile-container">
+                <img class="profile-picture" src="img/profile.webp" alt="">
+                <div class="profile-text-container">
+                    <span class="profile-text">Profile</span>
+                
+                </div>
+                <a href="signin.php"><button id="logout">Logout</button></a>
+                <!--
+                <div class="toggle">
+                    <i class="fas fa-moon toggle-icon"></i>
+                    <i class="fas fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <a href="index.html" class="links tooltip"><span class="tooltiptext">Home</span> <i class="left-menu-icon fas fa-home" ></i></a>
+            <a href="collection.html" class="links tooltip"> <span class="tooltiptext">Collection</span> <i class="left-menu-icon fas fa-tv"></i></a>
+                <a href="elite.html" class="links tooltip"> <span class="tooltiptext">Elite 5</span>  <i class="left-menu-icon fas fa-bookmark"></i></a>
+       
+                    <a href="about.html" class="links tooltip"> <span class="tooltiptext">About</span> <i class="left-menu-icon fas fa-users" style="text-shadow: 2px 2px 2px rgb(50, 218, 17);font-weight: bold;"></i></a>
+                    <a href="contact.html"  class="links tooltip"><span class="tooltiptext">Contact</span><i class="left-menu-icon fas fa-regular fa-address-book"></i></a>
+
+
+    </div>
+    <div class="container">
+        <h1 class="hi">About Us</h1>
+        <p>Welcome to our movie review website! We are passionate about movies and want to share our love for cinema with you. Our team of dedicated reviewers watches and analyzes the latest releases to provide you with honest and insightful reviews.</p>
+        
+        <br><br><h2 class="hi">Our Mission</h2>
+        <p>Our mission is to help movie enthusiasts like you make informed decisions about which films to watch. Whether you're into action, drama, comedy, or horror, we've got you covered. We strive to deliver reviews that are both entertaining and informative, giving you a glimpse into the world of cinema.</p>
+        
+        <br><br><h2 class="hi">Meet the Team</h2>
+        <p>Our team consists of movie buffs who are passionate about storytelling and the magic of the silver screen. From seasoned critics to avid cinephiles, each member brings a unique perspective and voice to our reviews.</p>
+        
+        <br><br><h3 class="hi">Person 1</h3>
+        <p>Person 1 is our chief editor and resident film critic. With over a decade of experience in the industry, he has a keen eye for detail and a deep understanding of cinematic techniques.</p>
+        
+        <br><br><h3 class="hi">Person 2</h3>
+        <p>Person 2 is our features writer and social media manager. She's always on the lookout for the latest movie trends and loves engaging with our audience on Twitter and Instagram.</p>
+        
+        <br><br><h3 class="hi">Person 3</h3>
+        <p>Person 3 is our tech guru and web developer. He ensures that our website runs smoothly and looks great on all devices, so you can enjoy reading our reviews wherever you are.</p>
+        </div>
+</body>
+</html>

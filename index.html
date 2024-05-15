@@ -1,0 +1,178 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="icon" href="logo.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <title>TheMovieLens</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo">TheMovieLens</h1>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <a href="index.html" class="links"><li class="menu-list-item " style="text-shadow: 2px 2px 2px rgb(50, 218, 17);">Home</li></a>
+                    <a href="collection.html" class="links"><li class="menu-list-item">Collections</li></a>
+                    <a href="elite.html" class="links"> <li class="menu-list-item">Elite 5</li></a>
+                    <a href="about.html" class="links"> <li class="menu-list-item">About us</li></a>
+                    <a href="contact.html" class="links"> <li class="menu-list-item">Contact</li></a>
+
+                </ul>
+            </div>
+            <div class="profile-container">
+                <img class="profile-picture" src="img/profile.webp" alt="">
+                <div class="profile-text-container">
+                    <span class="profile-text">Profile</span>
+                
+                </div>
+                <a href="signin.php"><button id="logout">Logout</button></a>
+                <!--
+                <div class="toggle">
+                    <i class="fas fa-moon toggle-icon"></i>
+                    <i class="fas fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <a href="index.html" class="links tooltip"><span class="tooltiptext">Home</span> <i class="left-menu-icon fas fa-home" style="text-shadow: 2px 2px 2px rgb(50, 218, 17);font-weight: bold;"></i></a>
+            <a href="collection.html" class="links tooltip"> <span class="tooltiptext">Collection</span> <i class="left-menu-icon fas fa-tv"></i></a>
+                <a href="elite.html" class="links tooltip"> <span class="tooltiptext">Elite 5</span>  <i class="left-menu-icon fas fa-bookmark"></i></a>
+       
+                    <a href="about.html" class="links tooltip"> <span class="tooltiptext">About</span> <i class="left-menu-icon fas fa-users"></i></a>
+                    <a href="contact.html"  class="links tooltip"><span class="tooltiptext">Contact</span><i class="left-menu-icon fas fa-regular fa-address-book"></i></a>
+
+
+    </div>
+    <div class="container">
+        <div class="content-container">
+            <div class="featured-content"
+                style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/f-1.jpg');">
+                <img class="featured-title" src="img/f-t-1.png" alt="">
+                <p class="featured-desc">"96" is a South Indian romantic drama film that revolves around the reunion of high school classmates, Ram and Janu, after 22 years, triggering a journey of nostalgia, regret, and unrequited love.</p>
+                <a href="96.html"><button class="featured-button">Details</button></a>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">Indian Film</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/1.jpeg" alt="">
+                            <span class="movie-list-item-title">Jai Bhim</span>
+                            
+                            <a href="Jai_Bhim.html"><button class="movie-list-item-button">Details</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/2.jpeg" alt="">
+                            <span class="movie-list-item-title">Premalu</span>
+                            
+                            <a href="Premalu.html"><button class="movie-list-item-button">Details</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/3.jpg" alt="">
+                            <span class="movie-list-item-title">Leo</span>
+                            
+                            <a href="leo.html"><button class="movie-list-item-button">Details</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/4.jpg" alt="">
+                            <span class="movie-list-item-title">3(Moonu)</span>
+                            
+                            <a href="moonu.html"><button class="movie-list-item-button">Details</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/5.jpg" alt="">
+                            <span class="movie-list-item-title">KGF</span>
+                            
+                            <a href="KGF.html"><button class="movie-list-item-button">Details</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/6.jpg" alt="">
+                            <span class="movie-list-item-title">RRR</span>
+                           
+                            <a href="RRR.html"><button class="movie-list-item-button">Details</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/19.jpg" alt="">
+                            <span class="movie-list-item-title">Love Today</span>
+                            
+                            <a href="Love_Today.html"><button class="movie-list-item-button">Details</button></a>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+         
+            <div class="featured-content"
+                style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/f-2.jpg'); background-size: cover;">
+                <img class="featured-title" src="img/f-t-2.png" alt="logo">
+                <p class="featured-desc">"The Dark Knight" follows Batman's battle against the Joker, a psychopathic criminal mastermind who aims to plunge Gotham City into chaos. Batman must confront his own moral boundaries while facing the Joker's ruthless schemes, leading to a gripping battle between the forces of chaos and justice.</p>
+                <a href="The_dark.html"><button class="featured-button">Details</button></a>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">Hollywood</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/8.jpg" alt="">
+                            <span class="movie-list-item-title">Avenger Engame</span>
+                            
+                            <a href="Endgame.html"><button class="movie-list-item-button">Details</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/9.jpg" alt="">
+                            <span class="movie-list-item-title">Spider Man: No Way Home</span>
+                            
+                            <a href="Spider.html"><button class="movie-list-item-button">Details</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/10.jpg" alt="">
+                            <span class="movie-list-item-title">Intersteller</span>
+                           
+                            <a href="Intersteller.html"><button class="movie-list-item-button">Details</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/11.jpg" alt="">
+                            <span class="movie-list-item-title">Oppenheimer</span>
+                           
+                            <a href="Oppen.html"><button class="movie-list-item-button">Details</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/12.jpg" alt="">
+                            <span class="movie-list-item-title">Avatar</span>
+                           
+                            <a href="Avatar.html"><button class="movie-list-item-button">Details</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/13.jpg" alt="">
+                            <span class="movie-list-item-title">Titanic</span>
+                           
+                            <a href="Titanic.html"><button class="movie-list-item-button">Details</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/18.jpg" alt="">
+                            <span class="movie-list-item-title">Inception</span>
+                           
+                            <a href="inception.html"><button class="movie-list-item-button">Details</button></a>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

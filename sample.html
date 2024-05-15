@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="CSS/for_all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <title>96</title>
+    <style>
+       body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #121212; /* Black */
+          color: #ffffff;
+          background-image: url('Castings/ih3.gif');
+          background-size: cover;
+          background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo">TheMovieLens</h1>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <a href="index.html" class="links"><li class="menu-list-item ">Home</li></a>
+                    <a href="collection.html" class="links"><li class="menu-list-item">Collections</li></a>
+                    <a href="elite.html" class="links"> <li class="menu-list-item">Elite 5</li></a>
+                    <a href="about.html" class="links"> <li class="menu-list-item">About us</li></a>
+                    <a href="contact.html" class="links"> <li class="menu-list-item">Contact</li></a>
+                </ul>
+            </div>
+            <div class="profile-container">
+                <img class="profile-picture" src="img/profile.webp" alt="">
+                <div class="profile-text-container">
+                    <span class="profile-text">Profile</span>
+                </div>
+                <a href="signin.php"><button id="logout">Logout</button></a>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <a href="index.html" class="links tooltip"><span class="tooltiptext">Home</span> <i class="left-menu-icon fas fa-home" ></i></a>
+        <a href="collection.html" class="links tooltip"> <span class="tooltiptext">Collection</span> <i class="left-menu-icon fas fa-tv"></i></a>
+        <a href="elite.html" class="links tooltip"> <span class="tooltiptext">Elite 5</span>  <i class="left-menu-icon fas fa-bookmark"></i></a>
+        <a href="about.html" class="links tooltip"> <span class="tooltiptext">About</span> <i class="left-menu-icon fas fa-users"></i></a>
+        <a href="contact.html"  class="links tooltip"><span class="tooltiptext">Contact</span><i class="left-menu-icon fas fa-regular fa-address-book"></i></a>
+    </div>
+    
+    <div class="container">
+        <h1 id="leo">96</h1>
+        <div class="featured-review-container">
+            <div class="image-container">
+                <img src="Images/96.jpg" alt="Movie 96"> <!-- Replace '96.jpg' with your image file -->
+            </div>
+            <div class="blue-border">
+                <section class="featured-review">
+                    <h2>Featured Review: "96"</h2>
+                    <p><strong>Director:</strong> C. Prem Kumar<br>
+                    <strong>Genre:</strong> Romance/Drama<br>
+                    <strong>Rating:</strong> ★★★★★</p>
+    
+                    <h3>Synopsis:</h3>
+                    <p>"96" is a heartwarming tale of love, longing, and nostalgia...</p>
+    
+                    <h3>Storyline:</h3>
+                    <p>Set in the backdrop of a school reunion, "96" follows the journey of Ram and Janu, former classmates who haven't seen each other in over two decades. As they reminisce about their past and the unfulfilled promises of their youth, they rediscover the depth of their connection and the power of first love. Through a series of flashbacks, the audience is transported back to the days of innocence and passion, as Ram and Janu confront their regrets and confront the reality of what could have been.</p>
+    
+                    <h3>Review:</h3>
+                    <p>C. Prem Kumar's "96" is a masterpiece that delicately captures the essence of romance and the bittersweet nature of memories...</p>
+    
+                    <h3>Final Verdict:</h3>
+                    <p>An emotional rollercoaster that will leave you reminiscing about your own past loves and moments.</p>
+                </section>
+            </div>
+            <h2>Add your Comments:-</h2>
+            <textarea name="comment" id="comment"  cols="50px" rows="7px" placeholder="add comments"></textarea>
+        </div>
+        
+        <section class="latest-reviews">
+            <h2>Latest Reviews</h2>
+            <ol>
+                <li><strong>"Midnight Melodies"</strong> - Director: Sarah Thompson - Genre: Romance/Musical - Rating: ★★★★☆</li>
+                <li><strong>"Echoes of War"</strong> - Director: Michael Chang - Genre: Action/Thriller - Rating: ★★★☆☆</li>
+                <li><strong>"The Last Laugh"</strong> - Director: David Lee - Genre: Comedy/Drama - Rating: ★★★★☆</li>
+            </ol>
+        </section>
+
+        
+        
+        <footer class="footer">
+            <p>&copy; 2024 FilmFusion. All rights reserved.</p>
+        </footer>
+        <a href="#" class="prev-button" ><i class="fas fa-solid fa-arrow-left"></i></a>
+        <a href="#" class="next-button" ><i class="fas fa-solid fa-arrow-right"></i></a>
+    </div>
+    
+    <!-- JavaScript Code -->
+    <script>
+        // JavaScript for slideshow
+        let reviewIndex = 0;
+        const reviews = document.querySelectorAll('.featured-review');
+    
+        function showReview() {
+            reviews.forEach(review => {
+                review.style.display = 'none';
+            });
+            reviewIndex++;
+            if (reviewIndex > reviews.length) {
+                reviewIndex = 1;
+            }
+            reviews[reviewIndex - 1].style.display = 'block';
+            setTimeout(showReview, 5000); // Change slide every 5 seconds
+        }
+        showReview();
+    </script>
+</body>
+</html>

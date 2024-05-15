@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="CSS/for_all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <title>Chennai Express</title>
+    <style>
+       body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #121212; /* Black */
+          color: #ffffff;
+          background-image: url('Castings/ih5.gif');
+          background-size: cover;
+          background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo">TheMovieLens</h1>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <a href="index.html" class="links"><li class="menu-list-item ">Home</li></a>
+                    <a href="collection.html" class="links"><li class="menu-list-item">Collections</li></a>
+                    <a href="elite.html" class="links"> <li class="menu-list-item">Elite 5</li></a>
+                    <a href="about.html" class="links"> <li class="menu-list-item">About us</li></a>
+                    <a href="contact.html" class="links"> <li class="menu-list-item">Contact</li></a>
+                </ul>
+            </div>
+            <div class="profile-container">
+                <img class="profile-picture" src="img/profile.webp" alt="">
+                <div class="profile-text-container">
+                    <span class="profile-text">Profile</span>
+                </div>
+                <a href="signin.php"><button id="logout">Logout</button></a>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <a href="index.html" class="links tooltip"><span class="tooltiptext">Home</span> <i class="left-menu-icon fas fa-home" ></i></a>
+        <a href="collection.html" class="links tooltip"> <span class="tooltiptext">Collection</span> <i class="left-menu-icon fas fa-tv"></i></a>
+        <a href="elite.html" class="links tooltip"> <span class="tooltiptext">Elite 5</span>  <i class="left-menu-icon fas fa-bookmark"></i></a>
+        <a href="about.html" class="links tooltip"> <span class="tooltiptext">About</span> <i class="left-menu-icon fas fa-users"></i></a>
+        <a href="contact.html"  class="links tooltip"><span class="tooltiptext">Contact</span><i class="left-menu-icon fas fa-regular fa-address-book"></i></a>
+    </div>
+    
+    <div class="container">
+        <h1 id="leo">Chennai Express</h1>
+        <div class="featured-review-container">
+            <div class="image-container">
+                <div id="youtube">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/hZGR5Sj1Bfo?si=AaytUh2AZEF_XZxh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="blue-border">
+                <section class="featured-review">
+                    <h2>Featured Review: "Chennai Express"</h2>
+                    <p><strong>Director:</strong> Rohit Shetty<br>
+                    <strong>Genre:</strong> Action/Comedy<br>
+                    <strong>Rating:</strong> ★★★☆☆</p>
+    
+                    <h3>Synopsis:</h3>
+                    <p>Chennai Express follows the journey of Rahul, a man who reluctantly finds himself on a train to Rameswaram in South India after his grandmother's passing. However, his plans take an unexpected turn when he meets Meenamma, a feisty Tamil girl running away from her family. Their adventures together lead to unexpected romance and a series of hilarious misadventures.</p>
+    
+                    <h3>Storyline:</h3>
+                    <p>Rahul's mundane journey turns into a rollercoaster ride when he boards the Chennai Express. Forced to accompany Meenamma to her hometown, Rahul finds himself entangled in a comical yet heartwarming escapade as they evade her pursuing family members and navigate through various misadventures, ultimately discovering love in the most unexpected of places.</p>
+    
+                    <h3>Review:</h3>
+                    <p>Chennai Express is a delightful blend of comedy, romance, and action, anchored by the sparkling chemistry between Shah Rukh Khan and Deepika Padukone. Directed by Rohit Shetty, the film combines slapstick humor with heartfelt moments, creating an entertaining and engaging cinematic experience. While the storyline may be predictable at times, the film's energy and charm make it a fun and enjoyable watch.</p>
+    
+                    <h3>Final Verdict:</h3>
+                    <p>Chennai Express is a breezy and entertaining film that delivers laughs and romance in equal measure. While it may not break new ground in terms of storytelling, its colorful characters, lively music, and picturesque locations make it a perfect choice for a feel-good movie night. Sit back, relax, and enjoy the ride on the Chennai Express!</p>
+                </section>
+            </div>
+           
+            <h2>Add your Comments:-</h2>
+
+            <div class="rate">
+              <input type="radio" id="star5" name="rate" value="5" />
+              <label for="star5" title="text">5 stars</label>
+              <input type="radio" id="star4" name="rate" value="4" />
+              <label for="star4" title="text">4 stars</label>
+              <input type="radio" id="star3" name="rate" value="3" />
+              <label for="star3" title="text">3 stars</label>
+              <input type="radio" id="star2" name="rate" value="2" />
+              <label for="star2" title="text">2 stars</label>
+              <input type="radio" id="star1" name="rate" value="1" />
+              <label for="star1" title="text">1 star</label>
+            </div>
+<br><br>
+
+            <textarea name="comment" id="comment"  cols="50px" rows="7px" placeholder="Add comments"></textarea>
+        </div>
+        
+        <section class="latest-reviews">
+            <h2>Latest Reviews</h2>
+            <ol>
+                <li><strong>"Midnight Melodies"</strong> - Director: Sarah Thompson - Genre: Romance/Musical - Rating: ★★★★☆</li>
+                <li><strong>"Echoes of War"</strong> - Director: Michael Chang - Genre: Action/Thriller - Rating: ★★★☆☆</li>
+                <li><strong>"The Last Laugh"</strong> - Director: David Lee - Genre: Comedy/Drama - Rating: ★★★★☆</li>
+            </ol>
+        </section>
+
+        
+        
+        <footer class="footer">
+            <p>&copy; 2024 FilmFusion. All rights reserved.</p>
+        </footer>
+        <a href="Love_Today.html" class="prev-button" ><i class="fas fa-solid fa-arrow-left"></i></a>
+        <a href="Premalu.html" class="next-button" ><i class="fas fa-solid fa-arrow-right"></i></a>
+    </div>
+    
+    <!-- JavaScript Code -->
+    <script>
+        // JavaScript for slideshow
+        let reviewIndex = 0;
+        const reviews = document.querySelectorAll('.featured-review');
+    
+        function showReview() {
+            reviews.forEach(review => {
+                review.style.display = 'none';
+            });
+            reviewIndex++;
+            if (reviewIndex > reviews.length) {
+                reviewIndex = 1;
+            }
+            reviews[reviewIndex - 1].style.display = 'block';
+            setTimeout(showReview, 5000); // Change slide every 5 seconds
+        }
+        showReview();
+    </script>
+</body>
+</html>
